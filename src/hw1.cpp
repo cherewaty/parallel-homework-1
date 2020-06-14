@@ -25,10 +25,12 @@ std::vector<int64_t> discard_duplicates(std::vector<int64_t> sorted_vector)
   std::vector<int64_t> unduplicated = {};
   int i;
 
+#pragma omp parallel for
   for (i = 0; i < sorted_vector.size(); ++i)
   {
     if (i == 0 || sorted_vector[i] != sorted_vector[i - 1])
     {
+#pragma omp critical
       unduplicated.push_back(sorted_vector[i]);
     }
   }
