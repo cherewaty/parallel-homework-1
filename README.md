@@ -11,14 +11,24 @@ These instructions are known to work on macOS Mojave. Your mileage may vary in o
 
 ## Pre-requisites:
 
-* OpenMP
-* CMake
+- OpenMP
+- CMake
+
+### On macOS use the system's clang instead of XCode's
+
+`export CC=/usr/local/opt/llvm/bin/clang`
+
+`export CXX=/usr/local/opt/llvm/bin/clang++`
+
+`export LDFLAGS="-L/usr/local/opt/llvm/lib"`
+
+`export CPPFLAGS="-I/usr/local/opt/llvm/include"`
 
 ### Hints on how to install OpenMP:
 
-*MacOs*: `brew install libomp`
-*Ubuntu Linux*: `sudo apt install libomp-dev`
-*Windows*: Installing in windows is a bit more complex. See these instructions: http://www.mathcancer.org/blog/setting-up-a-64-bit-gcc-environment-on-windows/
+_MacOs_: `brew install libomp`
+_Ubuntu Linux_: `sudo apt install libomp-dev`
+_Windows_: Installing in windows is a bit more complex. See these instructions: http://www.mathcancer.org/blog/setting-up-a-64-bit-gcc-environment-on-windows/
 
 ### Hints on how to install CMake:
 
@@ -37,5 +47,4 @@ After having installed OpenMP, perform the following steps, in this directory:
 
 Inside the `build` directory, execute:
 
-*`./hw1`
-
+\*`./hw1`
