@@ -15,6 +15,7 @@ double euclidean_length(std::vector<double> vector)
                                    : sum)
   for (i = 0; i < vector.size(); ++i)
   {
+    // std::cout << "Thread number: " + std::to_string(omp_get_thread_num()) + "\n";
     sum += vector[i] * vector[i];
   }
   return sqrt(sum);
@@ -28,6 +29,7 @@ std::vector<int64_t> discard_duplicates(std::vector<int64_t> sorted_vector)
 #pragma omp parallel for
   for (i = 0; i < sorted_vector.size(); ++i)
   {
+    // std::cout << "Thread number: " + std::to_string(omp_get_thread_num()) + "\n";
     if (i == 0 || sorted_vector[i] != sorted_vector[i - 1])
     {
 #pragma omp critical
