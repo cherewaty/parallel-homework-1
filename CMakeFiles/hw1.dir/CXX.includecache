@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abigail/Documents/parallelAlg/HW1/parallel-homework-1/src/hw1.cpp
+iostream
+-
+math.h
+-
+omp.h
+-
+hw1.h
+/home/abigail/Documents/parallelAlg/HW1/parallel-homework-1/src/hw1.h
+
+/home/abigail/Documents/parallelAlg/HW1/parallel-homework-1/src/hw1.h
+vector
+-
+
